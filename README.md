@@ -29,7 +29,7 @@ Where:
 - ✅ Prediction function for new data 
 - ✅ Code (converted from MATLAB)
 
-📖 Usage
+## 📖 Usage
 
 from linear_regression import predict
 
