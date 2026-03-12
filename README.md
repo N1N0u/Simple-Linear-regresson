@@ -33,9 +33,10 @@ Where:
 
 from linear_regression import predict
 
-# Predict price for 130m² house
+Predict price for 130m² house
+
 price = predict(130)
-print(f"Predicted price: {price:.2f} thousand $")
+print(f"Predicted price: {price:.2f}")
 
 🤝 Contributing
 Contributions are welcome! Feel free to:
