@@ -46,7 +46,7 @@ Contributions are welcome! Feel free to:
     Add more features (multiple regression, R² calculation, etc.)
 
 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 🙏 Acknowledgments
 
     Original MATLAB code from university coursework
