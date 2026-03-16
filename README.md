@@ -85,7 +85,7 @@ cd Simple-Linear-regresson
 python linear_regression.py
 
 ## 📸 Screenshots
-![Homepage](Screenshots/screenshot.png)
+![Homepage](Screenshots/screenshot.PNG)
 
 📁 Project Structure
 .
