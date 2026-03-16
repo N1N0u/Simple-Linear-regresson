@@ -1,43 +1,59 @@
-#linear regression
-#transforming my matlab code to python using numpy library
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')  # Switch to TkAgg backend for compatibility
+import matplotlib.pyplot as plt
 
-#feautures are trhe surface of the house
-features=np.array([50,80,100,120,150,180,200])
-#result is the known price for each house
-result=np.array([150,200,250,270,300,350,400])
+# Features are the surface area of the house (in m²)
+features = np.array([50, 80, 100, 120, 150, 180, 200])
 
-#Formula y=ax+b
-#where a: the slope / b: Intercept / y: result / x: feauters
+# Result is the known price for each house (in thousands of dollars)
+result = np.array([150, 200, 250, 270, 300, 350, 400])
 
-#the formula to calculate the linear regression is:
-# a = (sum (xi-x̄)(yi-ȳ)) / sum (xi-x̄)^2
-# b = ȳ - a·x̄
+# Formula y = ax + b
+# where a: the slope / b: intercept / y: result / x: features
 
-#x̄=mean of feauters
-#ȳ=mean of result
-n=len(features) #length of the features and result array must be the same
-x_bar=np.mean(features) # x̄
-y_bar=np.mean(result) # ȳ
+# The formula to calculate the linear regression is:
+# a = sum((xi - x̄) * (yi - ȳ)) / sum((xi - x̄)^2)
+# b = ȳ - a * x̄
 
-X=features-x_bar
-Y=result-y_bar  
+# x̄ = mean of features
+# ȳ = mean of result
+n = len(features)  # Length of the features and result array must be the same
+x_bar = np.mean(features)  # x̄
+y_bar = np.mean(result)  # ȳ
 
-a= (np.sum(X*Y))/(np.sum(X**2))
-print(a)
+X = features - x_bar
+Y = result - y_bar
 
-b=y_bar-(a*x_bar)
-print(b)
+# Calculate slope (a) and intercept (b)
+a = np.sum(X * Y) / np.sum(X**2)
+print(f"The value of the slope (a) is: {a:.2f}")
 
+b = y_bar - (a * x_bar)
+print(f"The value of the intercept (b) is: {b:.2f}")
 
-def predict(feauture):
-    return (a*feauture)+b 
+# Function to predict the price for a given feature (surface area)
+def predict(feature):
+    return a * feature + b
 
+# Predicting the price for a house with a surface area of 130 m²
+predicted_price = predict(130)
+print(f"Predicted price for a house with surface area 130 m² is: ${predicted_price:.2f} thousand")
 
-predicted_price=predict(130)
-print(f"predicted price for a house with surface 130 is: {predicted_price}")
+# Visualization of the data and regression line
+X_line = np.linspace(features.min() - 10, features.max() + 10, 100)
+y_line = b + a * X_line
 
+# Plotting the data and regression line
+plt.figure(figsize=(10, 6))
+plt.scatter(features, result, color='blue', s=100, label='Training Data')
+plt.plot(X_line, y_line, color='red', linewidth=2, label='Regression Line')
+plt.xlabel('Area (m²)')
+plt.ylabel('Price ($1000)')
+plt.title('Simple Linear Regression: House Prices')
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.show()
 
-
-
+#Model Evaluation
 
