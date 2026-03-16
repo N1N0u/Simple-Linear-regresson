@@ -84,6 +84,9 @@ git clone https://github.com/N1N0u/Simple-Linear-regresson.git
 cd Simple-Linear-regresson
 python linear_regression.py
 
+## 📸 Screenshots
+![Homepage](Screenshots/screenshot.png)
+
 📁 Project Structure
 .
 ├── linear_regression.py    # Main implementation + visualization
