@@ -55,5 +55,23 @@ plt.legend()
 plt.grid(True, alpha=0.3)
 plt.show()
 
-#Model Evaluation
+
+# Model evaluation
+
+# Mean Squared Error (MSE)
+predictions = predict(features)
+
+mse = np.mean((result - predictions) ** 2)
+
+print(f"Mean Squared Error: {mse:.2f}")
+
+# R² Score
+
+ss_total = np.sum((result - y_bar) ** 2)
+ss_residual = np.sum((result - predictions) ** 2)
+
+r2 = 1 - (ss_residual / ss_total)
+
+print(f"R² Score: {r2:.3f}")
+
 
