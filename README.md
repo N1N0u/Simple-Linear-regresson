@@ -87,10 +87,6 @@ python linear_regression.py
 ## 📸 Screenshots
 ![Homepage](Screenshots/screenshot.PNG)
 
-📁 Project Structure
-.
-├── linear_regression.py    # Main implementation + visualization
-└── README.md               # This file
 
 🔬 Code Features
 
