@@ -33,10 +33,12 @@ This repository implements simple linear regression using only NumPy, then valid
 ## 🚀 Technical Highlights
 
 ### Core Implementation
-```python
+
+``python
 # Closed-form least squares solution
 a = np.sum(X * Y) / np.sum(X ** 2)  # Slope
 b = y_bar - (a * x_bar)             # Intercept
+
 
 # Evaluation metrics from scratch
 mse = np.mean((y_true - y_pred) ** 2)
@@ -51,6 +53,7 @@ What This Code Does
     ✅ Production-ready structure — Clean, documented, modular code
 
 📊 Use Case: Real Estate Price Prediction
+
 Dataset: House surface area (m²) → Price (thousands $)
 | Surface (m²) | Actual Price (\$k) | Predicted (\$k) |
 | ------------ | ------------------ | --------------- |
@@ -90,32 +93,32 @@ python linear_regression.py
 
 Step-by-Step Mathematical Breakdown
 
-    Data Preparation — Feature/target separation with formatted display
-    Centroid Calculation — Mean values (x̄, ȳ) where regression line passes
-    Deviation Computation — Vectorized (xi-x̄) and (yi-ȳ) calculations
-    Parameter Estimation — Least squares closed-form solution
-    Prediction Engine — predict(feature) function for inference
-    Metric Evaluation — Manual MSE, RMSE, MAE, R² implementation
-    Library Validation — Bit-exact comparison with scikit-learn
-    Dual Visualization — Matplotlib comparison plots
+Data Preparation — Feature/target separation with formatted display
+Centroid Calculation — Mean values (x̄, ȳ) where regression line passes
+Deviation Computation — Vectorized (xi-x̄) and (yi-ȳ) calculations
+Parameter Estimation — Least squares closed-form solution
+Prediction Engine — predict(feature) function for inference
+Metric Evaluation — Manual MSE, RMSE, MAE, R² implementation
+Library Validation — Bit-exact comparison with scikit-learn
+Dual Visualization — Matplotlib comparison plots
 
 🎓 Learning Outcomes
 This project demonstrates understanding of:
 
-    Linear Algebra: Vectorized operations, matrix concepts
-    Statistics: Mean, variance, covariance, correlation
-    Optimization: Least squares minimization
-    ML Metrics: Loss functions and model evaluation
-    Validation: Scientific method for verifying implementations
+  Linear Algebra: Vectorized operations, matrix concepts
+  Statistics: Mean, variance, covariance, correlation
+  Optimization: Least squares minimization
+  ML Metrics: Loss functions and model evaluation
+  Validation: Scientific method for verifying implementations
 
 📝 License
 MIT License — Free for educational and commercial use.
 
 🙏 Acknowledgments
 
-    Original MATLAB coursework foundation
-    Scikit-learn for validation benchmark
-    NumPy/Matplotlib for scientific computing stack
+   Original MATLAB coursework foundation
+   Scikit-learn for validation benchmark
+   NumPy/Matplotlib for scientific computing stack
 
 Built from scratch. Validated against industry standards. Ready for production.
 Author: N1N0u
